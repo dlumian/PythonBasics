@@ -2,20 +2,59 @@
 
 Repo introduces basic Python concepts with to begin mastery of programming, machine learning, and data science concepts.
 
-This guide to Python overviews concepts and tools for machine learning that include environments, packages, scripts, and notebooks. 
+This guide to Python overviews concepts and tools for machine learning that include environments, packages, scripts, and notebooks. Data science requires more than just Python proficiency, but covering all that is beyond the scope of this project. Please see [Supporting Knowledge](#supporting-knowledge) and [Helpful Tools](./Markdowns/HelpfulTools.md) for additional tools and knowledge for data science. 
 
 Links to example files, websites, and notebooks will be referenced where available. Many subdirectories in this repo contain additional README files with a deeper dive into specific concepts or examples.
 
+[This brief summary](./Markdowns/DsTopics.md) of data science goals and topics may be informative, if you are new to ML and want a better understanding of what types of analyses exist and their importance. Specializing within the field can improve focus on what concepts to prioritize. 
+
 ## Topics
+- [Python Basics Repo](#python-basics-repo)
 - [Why Python](#why-python-for-machine-learning)
 - [Supporting Knowledge](#supporting-knowledge)
 - [Packages](#packages)
 - [Essential Packages](#essential-packages)
 - [Environments](#environments)
-- 
+- [Workflow Tools](#basic-workflow-tools-scripts-and-notebooks)
+- [Scripts](#writing-scripts)
+- [Notebooks](#using-notebooks)
 - [Effective Programming](#effective-python-programming)
 ---
 
+## Python Basics Repo
+[Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
+
+This repo is designed to demonstrate key aspects of Python programming and basic data science. This readme provides an overview of key concepts. Additional information on some topics may be found in the `Markdowns` directory. md files include text, links, and code snippets. [Notebooks](#using-notebooks) (.ipynb) files include text, executable code, and data visualizations. [Python scripts](#writing-scripts) (.py) files also contain executable code and may save models and files, but do not display visuals directly.
+
+Details on setting up workflow and running code is found throughout this file. Here is an overview of the directory file structure. Examples are designed to run independently. Therefore, once the appropriate [environment](#environments) is set up and activated, examples may be run in any order. 
+
+### Directory Structure
+
+- ClassificationExamples
+  - [iris](./ClassificationExamples/iris/README.md): example workflow classifying 3 species of iris flowers
+  - [random_forest_lecture](./ClassificationExamples/random_forest_lecture/random_forest.ipynb): a single notebook with in-depth details on decision trees and random forests. **Good starting point for individuals with programming experience looking for entry into machine learning** 
+- Environment
+  - README: details on environment installs and management tools
+  - environment files: txt and ymls containing required details on Python version and packages 
+- LICENSE: Info on using this repository
+- Markdowns
+  - [DsTopics.md](./Markdowns/DsTopics.md): Briefly summarizes data science concepts and types of analysis
+  - [HelpfulTools.md](./Markdowns/HelpfulTools.md): Guide to setting up a workspace with modern tools such as debugging, tests, and Python environments
+  - [PackageImportance.md](./Markdowns/PackageImportance.md): Elaborates on the value and benefits of properly creating modular code and following best practices
+- PythonBasics
+  - [Basics.ipynb](./PythonBasics/Basics.ipynb): Guide to datatypes and basic Python functionality-helpful for those who may need additional practice before the ML oriented examples
+- README.md: This file with an overview of many topics. If new to Python, read the whole file. If experienced, use the [Topics](#topics) section to jump to topics of interest
+- RegressionExamples
+  - [housing](./RegressionExamples/housing/README.md): regression example using historic housing prices from Boston
+
+### Example Directories
+With the goal of consistency, several common directories may be found in example folders. Some examples may be a single notebook, while others contain all the directories listed below.
+
+- clf_results: holds results of multiple runs with metrics and visuals for each
+- images: images generated from EDA or analysis
+- notebooks: collection of ordered notebooks to run
+- README: markdown file with details about that specific example
+- src: python scripts which may be imported into notebooks or executed directly
 
 ## Why Python for Machine Learning?
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
@@ -216,11 +255,73 @@ Additional advanced libraries of interest for data science:
 ## Environments
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
-Environments, and their management, is essential to successful project collaboration and maintenance. As Python version and packages change, it is vital to document the environment in which a project was made and deployed. Without this record, it is easy to introduce errors and issues into your code. A list of packages and versions can be generated with [Conda](https://www.anaconda.com/) or [pip](https://pypi.org/project/pip/) to help reduce such problems. Multiple Python environments can be stored and activated when needed. See [Environments](./Environment/README.md) for more details.
+Environments, and their management, is essential to successful project collaboration and maintenance. It is vital to document the environment in which a project was made and deployed because Python versions and packages change. Without a record, it is easy to introduce errors and issues into your code. A list of packages and versions can be generated with [Conda](https://www.anaconda.com/) or [pip](https://pypi.org/project/pip/) to help reduce such problems. Multiple Python environments can be stored and activated when needed. See [Environments](./Environment/README.md) for more details.
 
+## Basic Workflow Tools: Scripts and Notebooks
 
+Code can be developed and executed in many different ways. The two primary data science options are scripts and notebooks. 
 
-## 3. Writing Scripts
+Choosing between [scripts](#writing-scripts) and [notebooks](#using-notebooks) depends on the task at hand and the stage of your workflow. Here are some guidelines on when to use each:
+
+### Scripts Preferred for:
+1. **Production Code**:
+   - Scripts are ideal for code that needs to be run in production environments. They can be version-controlled more effectively and integrated into automated workflows.
+   - Scripts are easier to test, maintain, and refactor compared to notebooks.
+
+2. **Automation and Reproducibility**:
+   - If you need to automate tasks, such as data processing pipelines, scripts are more suitable because they can be scheduled and executed without manual intervention.
+   - Scripts are also better for ensuring reproducibility of your workflows.
+
+3. **Complex Projects**:
+   - For larger projects with multiple components, scripts (organized into modules and packages) are preferable. They allow for better organization, modularity, and separation of concerns.
+   - Using scripts makes it easier to manage dependencies and environment configurations.
+
+4. **Performance**:
+   - If you need to optimize performance and reduce overhead, scripts are typically more efficient as they avoid the interactive overhead of notebooks.
+
+### Notebooks Preferred for:
+1. **Exploratory Data Analysis (EDA)**:
+   - Notebooks are great for EDA because they allow you to iteratively run and refine your code, visualize data, and document insights in a linear, readable manner.
+   - The ability to mix code, visualizations, and markdown makes it easy to understand and share your exploratory process.
+
+2. **Data Visualization**:
+   - If you are generating plots and visualizations, notebooks allow you to see the results immediately and make adjustments on the fly.
+
+3. **Documentation and Tutorials**:
+   - Notebooks are excellent for creating tutorials or documenting workflows because of their readability and interactivity.
+   - Combining code with detailed explanations helps others (or future you) understand the thought process and logic behind the code.
+
+4. **Interactive Development**:
+   - For tasks where you need to quickly test hypotheses or experiment with different approaches, notebooks provide a flexible environment.
+
+### Hybrid Preferred for:
+Sometimes, a project may require both interactive analysis and automated processing. You can use notebooks for the interactive parts (like data exploration and visualization) and scripts for the automated parts (like data cleaning and model training).
+
+1. **Prototyping to Production**:
+   - You might start with a notebook for prototyping and exploration. Once the approach is validated, you can refactor the code into scripts for production deployment.
+   - This allows you to benefit from the interactive development environment of notebooks while ensuring the robustness and maintainability of scripts.
+
+2. **Comprehensive Reports**:
+   - Notebooks can be used to create detailed reports with visualizations and explanations. Scripts can be called within these notebooks to run heavy computations or preprocess data.
+   - This combination allows you to maintain clean, well-documented analyses while leveraging the efficiency of scripts for computational tasks.
+
+### Practical Examples:
+- **Machine Learning Workflow**:
+  - **Notebook**: Initial data exploration, feature engineering, model prototyping, and visualizations.
+  - **Script**: Data preprocessing pipeline, model training, evaluation, and deployment.
+
+- **Data Analysis Project**:
+  - **Notebook**: EDA, hypothesis testing, and generating visualizations for reports.
+  - **Script**: Data extraction, transformation, and loading (ETL) processes, as well as scheduled reports generation.
+
+- **Tutorial Development**:
+  - **Notebook**: Creating interactive tutorials with step-by-step explanations and code snippets.
+  - **Script**: Including complex functions or utility scripts to keep the notebook concise and focused on the teaching content.
+
+By leveraging the strengths of both scripts and notebooks, you can create a workflow that is both efficient and easy to maintain, while also being adaptable to different stages of your projects.
+
+## Writing Scripts
+[Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
 Scripts are Python files (.py) that contain code to be executed.
 
@@ -243,7 +344,8 @@ Scripts are Python files (.py) that contain code to be executed.
   python myscript.py
   ```
 
-## 4. Using Notebooks
+## Using Notebooks
+[Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
 Notebooks, such as Jupyter Notebooks, allow for interactive code execution and visualization.
 
