@@ -1,22 +1,24 @@
-# sklearn Iris Tutorial
-Introduction to classification techniques with sklearns iris dataset.
+# Iris Classification
+Introduction to classification techniques with sklearn iris dataset.
 
 Notebooks create and analyze the Iris Classification data with sklearn.
 
-Notebooks implement a logistic regression and a random forest classifier.
+Visualize and save results. 
 
-## Repo Goals
+**NOTE:** Notebooks are very short by design. This separation will help highlight methods for saving and loading data.
 
-By completing these notebooks, you should be able to understand how to run classification with sklear, visualize results, compare models and select the best performing one using a given metric.
+## Goals
 
-Notebooks rely on pandas, sklearn, joblib, seaborn and matplotlib libraries (see environment dir).
+These notebooks showcase classification with sklearn, including visualizing results, comparing models, and selecting the best performing model using a given metric.
 
 ## Notebooks Overview
 
+The notebooks for this example are numbered and must be run in order. 
+
 1. 1_Generate_Data
     * Imports data from sklearn
+    * Creates a new directory
     * Saves data to csv files in 'data' dir
-    * Has notes on environment setup (i.e., package versions) to complement the yml in the 'environment' dir
 1. 2_Train_Test_Split
     * Imports data using pandas from csv files
     * Uses sklearn train-test split to create training and test datasets
