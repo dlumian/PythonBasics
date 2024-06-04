@@ -2,7 +2,12 @@
 
 Repo introduces basic Python concepts with to begin mastery of programming, machine learning, and data science concepts.
 
-This guide to Python overviews concepts and tools for machine learning that include environments, packages, scripts, and notebooks. Data science requires more than just Python proficiency, but covering all that is beyond the scope of this project. Please see [Supporting Knowledge](#supporting-knowledge) and [Helpful Tools](./Markdowns/HelpfulTools.md) for additional tools and knowledge for data science. 
+This guide to Python overviews concepts and tools for machine learning that include environments, packages, scripts, and notebooks. Data science requires more than just Python proficiency, but covering all that is beyond the scope of this project. 
+
+Resources for general DS and programming:
+- [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science training and evaluation of models
+- [Supporting Knowledge](#supporting-knowledge): Complimentary skillsets to programming in Python
+- [Helpful Tools](./Markdowns/HelpfulTools.md): Tools and knowledge for data science. 
 
 Links to example files, websites, and notebooks will be referenced where available. Many subdirectories in this repo contain additional README files with a deeper dive into specific concepts or examples.
 
@@ -40,6 +45,7 @@ Details on setting up workflow and running code is found throughout this file. H
 - Markdowns
   - [DsTopics.md](./Markdowns/DsTopics.md): Briefly summarizes data science concepts and types of analysis
   - [HelpfulTools.md](./Markdowns/HelpfulTools.md): Guide to setting up a workspace with modern tools such as debugging, tests, and Python environments
+  - [ModelEvaluation.md](./Markdowns/ModelEvaluation.md): Descriptions of how model training should be conducted and evaluated
   - [PackageImportance.md](./Markdowns/PackageImportance.md): Elaborates on the value and benefits of properly creating modular code and following best practices
 - PythonBasics
   - [Basics.ipynb](./PythonBasics/Basics.ipynb): Guide to datatypes and basic Python functionality-helpful for those who may need additional practice before the ML oriented examples
