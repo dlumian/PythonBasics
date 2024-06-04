@@ -13,6 +13,7 @@ Links to example files, websites, and notebooks will be referenced where availab
 - [Essential Packages](#essential-packages)
 - [Environments](#environments)
 - 
+- [Effective Programming](#effective-python-programming)
 ---
 
 
@@ -215,7 +216,7 @@ Additional advanced libraries of interest for data science:
 ## Environments
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
-Environments, and their management, is essential to successful project colloboration and maintanence. As Python version and packages change, it is vital to document the environment in which a project was made and deployed. Without this record, it is easy to introduce errors and issues into your code. A list of packages and versions can be generated with [Conda](https://www.anaconda.com/) or [pip](https://pypi.org/project/pip/) to help reduce such problems. Multiple Python environments can be stored and activated when needed. See [Enviroments](./Environment/README.md) for more details.
+Environments, and their management, is essential to successful project collaboration and maintenance. As Python version and packages change, it is vital to document the environment in which a project was made and deployed. Without this record, it is easy to introduce errors and issues into your code. A list of packages and versions can be generated with [Conda](https://www.anaconda.com/) or [pip](https://pypi.org/project/pip/) to help reduce such problems. Multiple Python environments can be stored and activated when needed. See [Environments](./Environment/README.md) for more details.
 
 
 
@@ -273,4 +274,11 @@ Notebooks, such as Jupyter Notebooks, allow for interactive code execution and v
 
 ---
 
-This guide should provide a solid foundation for beginners in Python for machine learning. You can expand each section with more detailed explanations and examples as needed.
+## Effective Python Programming
+[Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
+
+To maximize efficiency, data scientists not only rely on packages and libraries, but must also customize their workflow and tools. A myriad of tools exist for text editing, debugging, optimization, and testing. Available features include color syntax highlighting, color themes, testing frameworks, and documentation standards.
+
+I highly encourage taking the time to invest in researching, selecting, and fine-tuning your work tools and flows. This investment will save many hours down the road by providing a positive workspace and on-the-go feedback.
+
+A concise list of options with brief descriptions is in [HelpfulTools](./Markdowns/HelpfulTools.md).
