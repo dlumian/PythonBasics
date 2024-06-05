@@ -1,17 +1,14 @@
 # Basic Guide to Python Concepts and Tools for Machine Learning
 
-Repo introduces basic Python concepts with to begin mastery of programming, machine learning, and data science concepts.
+This repo introduces basic Python concepts to begin mastering programming, machine learning, and data science concepts.
 
-This guide to Python overviews concepts and tools for machine learning that include environments, packages, scripts, and notebooks. Data science requires more than just Python proficiency, but covering all that is beyond the scope of this project. 
+This guide to Python overviews concepts and tools for machine learning in Python that include [environments](#environments), [packages](#packages), [scripts](#writing-scripts), and [notebooks](#using-notebooks). 
 
-Resources for general DS and programming:
-- [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science training and evaluation of models
-- [Supporting Knowledge](#supporting-knowledge): Complimentary skillsets to programming in Python
-- [Helpful Tools](./Markdowns/HelpfulTools.md): Tools and knowledge for data science. 
+Covering all the skills of data science are beyond the scope of this repo. Additional skills and tools are mentioned throughout to facilitate independent study. A great many resources are available, many free, for learning and experimenting with data science.
 
-Links to example files, websites, and notebooks will be referenced where available. Many subdirectories in this repo contain additional README files with a deeper dive into specific concepts or examples.
+If you are new to data science, or desire a quick refresh, the [Supporting Knowledge](#supporting-knowledge) section covers some of these additional skills briefly to provide context and a more holistic understanding of the data science process.
 
-[This brief summary](./Markdowns/DsTopics.md) of data science goals and topics may be informative, if you are new to ML and want a better understanding of what types of analyses exist and their importance. Specializing within the field can improve focus on what concepts to prioritize. 
+Links to example files, websites, and notebooks are included when possible. Many subdirectories in this repo contain additional README files with a deeper dive into the specific concepts or example of that directory.
 
 ## Topics
 - [Python Basics Repo](#python-basics-repo)
@@ -24,53 +21,64 @@ Links to example files, websites, and notebooks will be referenced where availab
 - [Scripts](#writing-scripts)
 - [Notebooks](#using-notebooks)
 - [Effective Programming](#effective-python-programming)
+- [Tips and Tricks](#tips-and-tricks)
 ---
 
 ## Python Basics Repo
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
-This repo is designed to demonstrate key aspects of Python programming and basic data science. This readme provides an overview of key concepts. Additional information on some topics may be found in the `Markdowns` directory. md files include text, links, and code snippets. [Notebooks](#using-notebooks) (.ipynb) files include text, executable code, and data visualizations. [Python scripts](#writing-scripts) (.py) files also contain executable code and may save models and files, but do not display visuals directly.
+This repo is designed to demonstrate key aspects of Python programming and basic data science. This readme provides an overview of key concepts and links to other relevant files in the repo. Additional information on some topics may be found in [Markdowns](./Markdowns/). Markdown (.md) files include text, links, and code snippets. [Notebooks](#using-notebooks) (.ipynb) files include text, executable code, and data visualizations. [Python scripts](#writing-scripts) (.py) files also contain executable code and may save models and files, but do not display visuals directly. See [Workflow Tools](#basic-workflow-tools-scripts-and-notebooks) for more information on the use of scripts vs notebooks.
 
-Details on setting up workflow and running code is found throughout this file. Here is an overview of the directory file structure. Examples are designed to run independently. Therefore, once the appropriate [environment](#environments) is set up and activated, examples may be run in any order. 
+Examples are divided by goal (Python vs ML) and analysis type (e.g., classification vs regression). Details on setting up workflow and running code is found throughout this file. A common [environment](#environments) is used for all examples. **NOTE: Code will not execute correctly without the proper environment.** Examples are designed to run independently. Therefore, once the appropriate environment is set up and activated, examples may be run in any order. **NOTE: Notebooks and scripts within an example may have a required order of execution.**
 
 ### Directory Structure
+Outlined below are key directories (alphabetically) in this repo:
 
 - ClassificationExamples
-  - [iris](./ClassificationExamples/iris/README.md): example workflow classifying 3 species of iris flowers
+  - [iris](./ClassificationExamples/iris/README.md): example workflow classifying 3 species of iris flowers using multiple notebooks
   - [random_forest_lecture](./ClassificationExamples/random_forest_lecture/random_forest.ipynb): a single notebook with in-depth details on decision trees and random forests. **Good starting point for individuals with programming experience looking for entry into machine learning** 
 - Environment
   - README: details on environment installs and management tools
   - environment files: txt and ymls containing required details on Python version and packages 
 - LICENSE: Info on using this repository
 - Markdowns
-  - [DsTopics.md](./Markdowns/DsTopics.md): Briefly summarizes data science concepts and types of analysis
-  - [HelpfulTools.md](./Markdowns/HelpfulTools.md): Guide to setting up a workspace with modern tools such as debugging, tests, and Python environments
-  - [ModelEvaluation.md](./Markdowns/ModelEvaluation.md): Descriptions of how model training should be conducted and evaluated
-  - [PackageImportance.md](./Markdowns/PackageImportance.md): Elaborates on the value and benefits of properly creating modular code and following best practices
+  - [Data Types](./Markdowns/DataTypes.md): Summary of data type and factors for data science such as structured or not, missing values, and time-series features
+  - [Data Science Topics](./Markdowns/DsTopics.md): Overview of data science goals and topics providing a quick explanation of types of analyses and their importance
+  - [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
+  - [Helpful Tools](./Markdowns/HelpfulTools.md): Tools to optimize efficiency including text editing, debugging, style guides, and more 
+  - [Package Importance](./Markdowns/PackageImportance.md): Expands on [Packages](#packages) section emphasizing the importance of writing clean, reusable, and maintainable code 
 - PythonBasics
-  - [Basics.ipynb](./PythonBasics/Basics.ipynb): Guide to datatypes and basic Python functionality-helpful for those who may need additional practice before the ML oriented examples
+  - [Basics.ipynb](./PythonBasics/Basics.ipynb): Guide to datatypes and basic Python functionality designed for those who may need additional practice before the ML oriented examples
 - README.md: This file with an overview of many topics. If new to Python, read the whole file. If experienced, use the [Topics](#topics) section to jump to topics of interest
 - RegressionExamples
-  - [housing](./RegressionExamples/housing/README.md): regression example using historic housing prices from Boston
+  - [housing](./RegressionExamples/housing/README.md): regression example using historic housing prices from Boston using multiple notebooks
 
-### Example Directories
+### Directory Naming Conventions
 With the goal of consistency, several common directories may be found in example folders. Some examples may be a single notebook, while others contain all the directories listed below.
 
-- clf_results: holds results of multiple runs with metrics and visuals for each
-- images: images generated from EDA or analysis
-- notebooks: collection of ordered notebooks to run
-- README: markdown file with details about that specific example
-- src: python scripts which may be imported into notebooks or executed directly
+- `clf_results`: holds results of multiple runs with metrics and visuals for each
+- `images`: images generated from EDA or analysis
+- `notebooks`: collection of ordered notebooks to run
+- `README`: markdown file with details about that specific example
+- `src`: python scripts which may be imported into notebooks or executed directly
 
 ## Why Python for Machine Learning?
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
-Python is a popular platform for machine learning due to its simplicity, readability, and extensive ecosystem of libraries and frameworks. Its syntax is straightforward, making it accessible for beginners and efficient for experienced programmers. Python’s robust community support and comprehensive documentation further enhance its usability in machine learning projects. Key libraries and packages such as Numpy, Pandas, Scikit-Learn, TensorFlow, and PyTorch provide powerful tools for numerical computations, data manipulation, and model building, streamlining the development process. More on [packages](#packages) found here. 
+Python is a popular platform for machine learning due to its simplicity, readability, and extensive ecosystem of libraries and frameworks. Its syntax is straightforward, making it accessible for beginners and efficient for experienced programmers. Python’s robust community support and comprehensive documentation further enhance its usability in machine learning projects. Key libraries and packages such as [Numpy](#numpy), [Pandas](#pandas), [Scikit-Learn](#scikit-learn), TensorFlow, and PyTorch provide powerful tools for numerical computations, data manipulation, and model building, streamlining the development process. More on [packages](#packages) found here. 
 
 ## Supporting Knowledge
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
-To effectively work in Python for machine learning, it’s important to have knowledge of the following tools and concepts:
+To effectively work in Python for machine learning, it’s important to have knowledge of the following tools: Git, GitHub, CLIs, and SQL.
+
+Deep-dive topics of interest:
+- [Data Types](./Markdowns/DataTypes.md): Summary of data type and factors for data science such as structured or not, missing values, and time-series features
+- [Data Science Topics](./Markdowns/DsTopics.md): Overview of data science goals and topics providing a quick explanation of types of analyses and their importance
+- [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
+- [Helpful Tools](./Markdowns/HelpfulTools.md): Tools to optimize efficiency including text editing, debugging, style guides, and more 
+- [Package Importance](./Markdowns/PackageImportance.md): Expands on [Packages](#packages) section emphasizing the importance of writing clean, reusable, and maintainable code 
+
 
 - **Git and GitHub:**
   - **Git:** A version control system that helps track changes to code, collaborate with others, and manage different versions of a project.
@@ -81,7 +89,11 @@ To effectively work in Python for machine learning, it’s important to have kno
       git commit -m "message"  # Commit changes
       git push          # Push changes to a remote repository
       ```
-  - **GitHub:** A platform for hosting and managing Git repositories, facilitating collaboration and sharing of code. **NOTE:** Repos can be private or public-therefore, it is important to consider what information is shared in each and with whom.
+  - **GitHub:** A platform for hosting and managing Git repositories, facilitating collaboration and sharing of code. 
+
+    <span style="color:red"> - **NOTE:** Repos can be private or public making it very important to consider what information and data is shared and with whom.</span>
+
+  
 
 - **Command Line Interfaces (CLIs):**
   - CLIs allow for efficient navigation and execution of commands on your computer. Familiarity with basic command line operations is essential for tasks such as setting up environments, managing packages, and running scripts.
@@ -91,7 +103,12 @@ To effectively work in Python for machine learning, it’s important to have kno
       cd path/to/directory  # Change directory
       mkdir new_directory   # Create a new directory
       ```
-    - **NOTE:** Many CLIs exist and may vary for many reasons including operating system. Be sure to find the correct instructions for your workspace. 
+    <span style="color:red"> - **NOTE:** Many CLIs exist and may vary for many reasons including operating system. Be sure to find the correct instructions for your workspace.</span>
+    
+
+- **SQL:**
+  - A relational database querying language that's efficient for data analysis and manipulation
+  - Data scientists must often collect data from databases such as SQL for analysis
 
 ---
 
@@ -142,7 +159,7 @@ Key benefits elaborated on in the file linked above.
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
 ### [Numpy](https://numpy.org/)
-Numpy is a library for numerical computations. Often used not only directly, but also is a dependency for many other libraries. 
+Numpy is a library for numerical computations. Used directly and also a common dependency for other relevant libraries. 
 
 - **Creating Arrays:**
   ```python
@@ -186,7 +203,7 @@ DataFrames can be used to perform a variety of data analysis tasks, such as:
   ```
 
 ### [Scikit-Learn](https://scikit-learn.org/stable/)
-Scikit-learn is a machine learning library. It offers a wide variety of analysis options, many of which follow a standard order of operations. Most commonly, the sequence is to instantiate a model, fit a model, and then predict with the model.
+Scikit-learn is a machine learning library. It offers a wide variety of analysis options, many of which follow a standard order of operations. Most commonly, the sequence is to instantiate a model, fit a model, and then predict with the model. Includes tools for splitting data for training, testing, and/or cross-validation.
 
 Analysis types include:
 - Classification
@@ -243,6 +260,40 @@ Seaborn is a data visualization library built on top of Matplotlib. It provides 
   # Create a pair plot
   sns.pairplot(data, hue='species')
   plt.show()
+  ```
+
+
+### [Plotly](https://plotly.com/graphing-libraries/)
+Plotly is a powerful graphing library for Python that allows for interactive, publication-quality visualizations. It is particularly useful for creating complex and customizable visualizations with ease. It integrates seamlessly with Pandas and can be used in Jupyter notebooks for interactive data analysis.
+
+- **Key Features**
+  - **Interactive Plots:** Zoom, pan, hover, and click to interact with data points.
+  - **Wide Range of Charts:** From simple line charts to complex 3D scatter plots.
+  - **Customization:** Extensive options for styling and customizing visualizations.
+  - **Integration:** Works well with Pandas and Jupyter notebooks.
+  - **Offline and Online Modes:** Create plots that work both offline and online.
+
+- **Example Usage**
+  ```python
+  import plotly.graph_objects as go
+
+  # Sample data
+  x = [1, 2, 3, 4, 5]
+  y = [10, 11, 12, 13, 14]
+
+  # Create a figure
+  fig = go.Figure()
+
+  # Add a line trace
+  fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Line Chart'))
+
+  # Add titles and labels
+  fig.update_layout(title='Basic Line Chart',
+                    xaxis_title='X Axis',
+                    yaxis_title='Y Axis')
+
+  # Show the plot
+  fig.show()
   ```
 
 ### More Advanced Libraries
@@ -390,3 +441,36 @@ To maximize efficiency, data scientists not only rely on packages and libraries,
 I highly encourage taking the time to invest in researching, selecting, and fine-tuning your work tools and flows. This investment will save many hours down the road by providing a positive workspace and on-the-go feedback.
 
 A concise list of options with brief descriptions is in [HelpfulTools](./Markdowns/HelpfulTools.md).
+
+## Tips and Tricks
+[Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
+
+Code snippets for common commands that can help quickly pinpoint code issues.
+
+**NOTE:**Examples shown below are from Mac, and should work on most linux distros too. Windows machines may require different commands and syntax.
+- **Checking Versions**
+  A common source of error is the use of incorrect versions of required software. Remember environments help address this issue and the correct environment must be activated. If an environment is active, the env name may be in the filepaths returned.
+  - **Shell Version**
+    - In terminal: ```echo "$SHELL"```
+  - **Python Version**
+    - **CLI**: 
+      - Filepath: `which python`
+      - Version: `python --version`
+    - **Notebook**
+      ```python
+      import sys
+      sys.executable
+      ```
+  - **Package Version**
+    ```python
+    import pandas as pd
+    pd.__version__
+    ```
+- **.gitignore**
+
+  Git repos have a hidden file, `.gitignore`, which can be used to exclude files from being stored in the repo. Git/GitHub is not an ideal location for large data storage, which can make the repo slow to sync and update. Data, large model files, and junk files should often be ignored.
+  ```txt
+  file_to_ignore.txt # ignore single file
+  **/data/ # ignore all directories named data anywhere in the repo
+  **/.DS_Store #ignore all files with this name anywhere in the repo
+  ```
