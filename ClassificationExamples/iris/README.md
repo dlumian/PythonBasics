@@ -1,15 +1,27 @@
 # Iris Classification
-Introduction to classification techniques with sklearn iris dataset.
+Introduction to classification with iris dataset. This dataset is built into sklearn allowing for data to be loaded from package instead of a file.
 
-Notebooks create and analyze the Iris Classification data with sklearn.
+Example can be run as a [script](./src/main.py) or [notebooks](./notebooks/). See [primary readme](./../../README.md) for details on how to run either option.
 
-Visualize and save results. 
+**NOTE:** Notebooks are short by design to highlight saving and loading data. Notebook version also includes more comments and visuals.
 
-**NOTE:** Notebooks are very short by design. This separation highlights methods for saving and loading data. Also allows for rapid adding and testing other data manipulations for each step. 
+## Goal
 
-## Goals
+Showcase classification with sklearn, including visualizing results, comparing models, and storing data. 
 
-These notebooks showcase classification with sklearn, including visualizing results, comparing models, and selecting the best performing model using a given metric.
+## Directory Structure
+### Initial setup:
+- **notebooks:** 5 numbered notebooks to be run in order
+- **README.md:** this file
+- **src:** script version of example [main.py](./src/main.py)
+
+### Generated content
+- **clf_results:** for each model, stores confusion matrix and metrics
+- **data:** csv files of raw data and data partitioned for train-test split
+- **images:** holds copies of all model confusion matrices for quicker comparison
+- **models:** pickle files of each model so training and evaluation can happen in different steps
+
+#### NOTE: Content is not automatically removed and will be overwritten if running multiple times. To reset example, move or remove all of the directories listed under `Generated content`.
 
 ## Notebooks Overview
 
@@ -18,6 +30,7 @@ The notebooks for this example are numbered and must be run in order.
 **1_Generate_Data**
 
     * Imports data from sklearn
+    * Converts datatype to pandas df
     * Creates a new directory
     * Saves data to csv files in 'data' dir
 
@@ -48,6 +61,10 @@ The notebooks for this example are numbered and must be run in order.
         * Visualizing confusion matrices
         * Calculating accuracy
         * Generating other metrics with a classification report
+
+## Script Version
+
+The script is a more streamlined version of the notebook workflow. It runs all at once, so there is less redundancy in saving and loading data and models. 
 
 ## Example Results
 

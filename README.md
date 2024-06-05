@@ -34,6 +34,8 @@ Examples are divided by goal (Python vs ML) and analysis type (e.g., classificat
 ### Directory Structure
 Outlined below are key directories (alphabetically) in this repo:
 
+- Basics
+  - [Basics.ipynb](./Basics/Basics.ipynb): Guide to datatypes and basic Python functionality designed for those who may need additional practice before the ML oriented examples
 - ClassificationExamples
   - [iris](./ClassificationExamples/iris/README.md): example workflow classifying 3 species of iris flowers using multiple notebooks
   - [random_forest_lecture](./ClassificationExamples/random_forest_lecture/random_forest.ipynb): a single notebook with in-depth details on decision trees and random forests. **Good starting point for individuals with programming experience looking for entry into machine learning** 
@@ -47,8 +49,7 @@ Outlined below are key directories (alphabetically) in this repo:
   - [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
   - [Helpful Tools](./Markdowns/HelpfulTools.md): Tools to optimize efficiency including text editing, debugging, style guides, and more 
   - [Package Importance](./Markdowns/PackageImportance.md): Expands on [Packages](#packages) section emphasizing the importance of writing clean, reusable, and maintainable code 
-- PythonBasics
-  - [Basics.ipynb](./PythonBasics/Basics.ipynb): Guide to datatypes and basic Python functionality designed for those who may need additional practice before the ML oriented examples
+
 - README.md: This file with an overview of many topics. If new to Python, read the whole file. If experienced, use the [Topics](#topics) section to jump to topics of interest
 - RegressionExamples
   - [housing](./RegressionExamples/housing/README.md): regression example using historic housing prices from Boston using multiple notebooks
