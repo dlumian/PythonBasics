@@ -35,7 +35,7 @@ Examples are divided by goal (Python vs ML) and analysis type (e.g., classificat
 Outlined below are key directories (alphabetically) in this repo:
 
 - Basics
-  - [Basics.ipynb](./Basics/Basics.ipynb): Guide to datatypes and basic Python functionality designed for those who may need additional practice before the ML oriented examples
+  - [Basics.ipynb](./Basics/Basics.ipynb): [Notebook](#using-notebooks) introduction to Python data structions and syntax
 - ClassificationExamples
   - [iris](./ClassificationExamples/iris/README.md): example workflow classifying 3 species of iris flowers using multiple notebooks
   - [random_forest_lecture](./ClassificationExamples/random_forest_lecture/random_forest.ipynb): a single notebook with in-depth details on decision trees and random forests. **Good starting point for individuals with programming experience looking for entry into machine learning** 
@@ -48,6 +48,7 @@ Outlined below are key directories (alphabetically) in this repo:
   - [Data Science Topics](./Markdowns/DsTopics.md): Overview of data science goals and topics providing a quick explanation of types of analyses and their importance
   - [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
   - [Helpful Tools](./Markdowns/HelpfulTools.md): Tools to optimize efficiency including text editing, debugging, style guides, and more 
+  - [Jupyter Notebooks](./Markdowns/JupyterNotebooks.md): Describes cell types, kernels, and basic execution instructions for notebooks
   - [Package Importance](./Markdowns/PackageImportance.md): Expands on [Packages](#packages) section emphasizing the importance of writing clean, reusable, and maintainable code 
 
 - README.md: This file with an overview of many topics. If new to Python, read the whole file. If experienced, use the [Topics](#topics) section to jump to topics of interest
@@ -313,7 +314,7 @@ Additional advanced libraries of interest for data science:
 ## Environments
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
-Environments, and their management, is essential to successful project collaboration and maintenance. It is vital to document the environment in which a project was made and deployed because Python versions and packages change. Without a record, it is easy to introduce errors and issues into your code. A list of packages and versions can be generated with [Conda](https://www.anaconda.com/) or [pip](https://pypi.org/project/pip/) to help reduce such problems. Multiple Python environments can be stored and activated when needed. See [Environments](./Environment/README.md) for more details.
+[Environments](./Environment/README.md), and their management, are essential to successful project collaboration and maintenance. It is vital to document the environment in which a project was made and deployed because Python versions and packages change. Without a record, it is easy to introduce errors and issues into your code. A list of packages and versions can be generated with [Conda](https://www.anaconda.com/) or [pip](https://pypi.org/project/pip/) to help reduce such problems. Multiple Python environments can be stored and activated when needed. See [Environments](./Environment/README.md) for more details.
 
 ## Basic Workflow Tools: Scripts and Notebooks
 
@@ -405,7 +406,7 @@ Scripts are Python files (.py) that contain code to be executed.
 ## Using Notebooks
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
 
-Notebooks, such as Jupyter Notebooks, allow for interactive code execution and visualization.
+[Notebooks](./Markdowns/JupyterNotebooks.md) allow for interactive code execution and visualization.
 
 - **Installing Jupyter:**
   ```bash
