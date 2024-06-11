@@ -1,25 +1,32 @@
 import os
-from os.path import join
-from matplotlib.cm import get_cmap
-from numpy.core.numeric import outer
 import pandas as pd 
 import matplotlib.pyplot as plt 
+
+from joblib import dump
+from os.path import join
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import plot_confusion_matrix
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import classification_report
-from joblib import load, dump
+from sklearn.metrics import (
+    classification_report,
+    ConfusionMatrixDisplay,
+    accuracy_score
+)
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 
-class RunIrisClassification():
-    """Class to generate data and test classifiers using a train-test split
+class IrisClassification():
+    """
+    Class to generate data, train, and evluate classifiers on Iris dataset
     """
     def __init__(self):
+        self.data_dir = join('..', 'data')
+        self.img_dir = join('..', 'imgs')
         self.output_dir = join('..', 'clf_results')
+        os.makedirs(self.data_dir, exist_ok=True)
+        os.makedirs(self.img_dir, exist_ok=True)
         os.makedirs(self.output_dir, exist_ok=True)
         self.clf_dict = {
             'DecisionTree': DecisionTreeClassifier(),
@@ -27,6 +34,12 @@ class RunIrisClassification():
             'RandomForest': RandomForestClassifier()
         }
         self.results = pd.DataFrame()
+        # Create dictionary mapping target values to actual species names
+        self.target_mapping = {
+            0: 'setosa',
+            1: 'versicolor',
+            2: 'virginica'
+        }
 
     def load_data(self):
         """Loads iris data from sklearn
@@ -68,15 +81,18 @@ class RunIrisClassification():
             X = self.X_test
             y = self.y_test
         preds = clf.predict(X)        
-        cm_plt = plot_confusion_matrix(clf, X, y, cmap=plt.cm.Blues)
-        cm_plt.figure_.savefig(join(clf_output_dir, f'{train_or_test}_confusion_matrix.png'))
+        cm_plt = ConfusionMatrixDisplay.from_predictions(y_true=y, y_pred=preds, cmap='Blues')
+        cm_plt_path = join(clf_output_dir, f'{train_or_test}_confusion_matrix.png')
+        print(f'Saving image to path: {cm_plt_path}.')
+        cm_plt.figure_.savefig(cm_plt_path)
         report = classification_report(y, preds, output_dict=True)
-        df_report = pd.DataFrame(report)
-        df_report.to_csv(join(clf_output_dir, f'{train_or_test}_metrics.csv'))
-
+        df_report = pd.DataFrame(report).transpose()
+        report_path = join(clf_output_dir, f'{train_or_test}_metrics.csv')
+        print(f'Saving image to path: {report_path}.')
+        df_report.to_csv(report_path, index=False)
 
 if __name__=='__main__':
-    ric = RunIrisClassification()
-    ric.load_data()
-    ric.split_data()
-    ric.train_models()
+    ic = IrisClassification()
+    ic.load_data()
+    ic.split_data()
+    ic.train_models()

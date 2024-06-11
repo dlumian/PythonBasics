@@ -3,7 +3,7 @@ Introduction to classification with iris dataset. This dataset is built into skl
 
 Example can be run as a [script](./src/main.py) or [notebooks](./notebooks/). See [primary readme](./../../README.md) for details on how to run either option.
 
-**NOTE:** Notebooks are short by design to highlight saving and loading data. Notebook version also includes more comments and visuals.
+**NOTE:** Notebooks are short by design to highlight saving and loading data. Notebook version also includes more EDA and visuals.
 
 ## Goal
 
@@ -66,15 +66,7 @@ The notebooks for this example are numbered and must be run in order.
 
 The script is a more streamlined version of the notebook workflow. It runs all at once, so there is less redundancy in saving and loading data and models. 
 
-## Example Results
+## Results
 
-The two plots below show predicted vs. actual values for the train and test dataset for both models tested. Confusion matrices for both models are shown on the test set. 
-
-### Random Forest Confusion Matrix
-
-![Random Forest Confusion Matrix](./images/rf_cm.png)
-
-### Logistic Regression Confusion Matrix
-
-![Logistic Regression Confusion Matrix](./images/lr_cm.png)
+Classification metrics will be written out in the clf directory, as well as a confusion matrix. See [Model Evaluation](../../Markdowns/ModelEvaluation.md) for more information.
 
