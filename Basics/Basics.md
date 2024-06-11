@@ -12,12 +12,12 @@ Comments are indicated by the `#` symbol. These lines are not executued when run
 
 Notebook Topics:
 - [Data Types](#data-types)
-- [Math](#math)
-- [String Manipulation](#string-manipulation)
-- [Lists](#Lists)
-- [Dictionaries](#dictionaries)
-- [Booleans](#booleans)
-- [Assignment, Comparison, and Evaluations](#comparisons-and-evaluation)
+- Math
+- String Manipulation
+- Lists
+- Dictionaries
+- Booleans
+- [Assignment, Comparison, and Evaluations](#variable-setting-vs-evaluationcomparison)
 - [Built-in Functions](#built-in-functions)
 
 ## Data Types
