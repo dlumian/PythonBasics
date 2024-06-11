@@ -1,6 +1,6 @@
-# Overview of Key Data Types for Machine Learning
+# Overview of Key Data Factors for Machine Learning
 
-## Data Types
+## Data Descriptions
 
 ### Structured Data
 Structured data is highly organized and easily searchable in databases using fixed schemas. It is typically stored in tables with rows and columns.

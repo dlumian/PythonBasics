@@ -36,7 +36,8 @@ Outlined below are key directories (alphabetically) in this repo:
 
 - Basics
   - [Basics.ipynb](./Basics/Basics.ipynb): [Notebook](#using-notebooks) introduction to Python data structions and syntax
-- ClassificationExamples
+  - [Basics.md](./Basics/README.md): Covers basic Python operations including loops, functions, methods, and classes
+  - ClassificationExamples
   - [iris](./ClassificationExamples/iris/README.md): example workflow classifying 3 species of iris flowers using multiple notebooks
   - [random_forest_lecture](./ClassificationExamples/random_forest_lecture/random_forest.ipynb): a single notebook with in-depth details on decision trees and random forests. **Good starting point for individuals with programming experience looking for entry into machine learning** 
 - Environment
@@ -44,7 +45,7 @@ Outlined below are key directories (alphabetically) in this repo:
   - environment files: txt and ymls containing required details on Python version and packages 
 - LICENSE: Info on using this repository
 - Markdowns
-  - [Data Types](./Markdowns/DataTypes.md): Summary of data type and factors for data science such as structured or not, missing values, and time-series features
+  - [Data Descriptors](./Markdowns/DataDescriptors.md): Facotrs that define and provide insight into data quality, such as structured data, missing values, and time-series features
   - [Data Science Topics](./Markdowns/DsTopics.md): Overview of data science goals and topics providing a quick explanation of types of analyses and their importance
   - [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
   - [Helpful Tools](./Markdowns/HelpfulTools.md): Tools to optimize efficiency including text editing, debugging, style guides, and more 
