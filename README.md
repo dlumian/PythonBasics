@@ -37,7 +37,7 @@ Outlined below are key directories (alphabetically) in this repo:
 - Basics
   - [Basics.ipynb](./Basics/Basics.ipynb): [Notebook](#using-notebooks) introduction to Python data structions and syntax
   - [Basics.md](./Basics/README.md): Covers basic Python operations including loops, functions, methods, and classes
-  - ClassificationExamples
+- ClassificationExamples
   - [iris](./ClassificationExamples/iris/README.md): example workflow classifying 3 species of iris flowers using multiple notebooks
   - [random_forest_lecture](./ClassificationExamples/random_forest_lecture/random_forest.ipynb): a single notebook with in-depth details on decision trees and random forests. **Good starting point for individuals with programming experience looking for entry into machine learning** 
 - Environment
@@ -47,11 +47,11 @@ Outlined below are key directories (alphabetically) in this repo:
 - Markdowns
   - [Data Descriptors](./Markdowns/DataDescriptors.md): Facotrs that define and provide insight into data quality, such as structured data, missing values, and time-series features
   - [Data Science Topics](./Markdowns/DsTopics.md): Overview of data science goals and topics providing a quick explanation of types of analyses and their importance
-  - [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
   - [Helpful Tools](./Markdowns/HelpfulTools.md): Tools to optimize efficiency including text editing, debugging, style guides, and more 
   - [Jupyter Notebooks](./Markdowns/JupyterNotebooks.md): Describes cell types, kernels, and basic execution instructions for notebooks
+  - [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
+  - [Operations](./Markdowns/Operations.md): Loops, dictionaries, functions, and methods to control workflows
   - [Package Importance](./Markdowns/PackageImportance.md): Expands on [Packages](#packages) section emphasizing the importance of writing clean, reusable, and maintainable code 
-
 - README.md: This file with an overview of many topics. If new to Python, read the whole file. If experienced, use the [Topics](#topics) section to jump to topics of interest
 - RegressionExamples
   - [housing](./RegressionExamples/housing/README.md): regression example using historic housing prices from Boston using multiple notebooks

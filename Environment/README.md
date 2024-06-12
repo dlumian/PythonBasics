@@ -184,8 +184,8 @@ To mitigate these issues, consider using the exact versions of packages that you
 
     - Conda:
 
-        ```conda env export > environment.yml```
+        ```conda env export --no-builds > environment.yml```
 
     - Pip:
 
-        ```pip freeze > requirements.txt```
+        ```pip list format=freeze > requirements.txt```
