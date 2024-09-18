@@ -51,7 +51,7 @@ Outlined below are key directories (alphabetically) in this repo:
   - [Jupyter Notebooks](./Markdowns/JupyterNotebooks.md): Describes cell types, kernels, and basic execution instructions for notebooks
   - [Model Training and Evaluation](./Markdowns/ModelEvaluation.md): Terminology and descriptions of core data science best practices, training, and evaluation of models
   - [Operations](./Markdowns/Operations.md): Loops, dictionaries, functions, and methods to control workflows
-  - [Package Importance](./Markdowns/PackageImportance.md): Expands on [Packages](#packages) section emphasizing the importance of writing clean, reusable, and maintainable code 
+- [PackageCreation](./PackageCreation/PackageGuide.md): Importance of packages and how-to guide for their creation
 - README.md: This file with an overview of many topics. If new to Python, read the whole file. If experienced, use the [Topics](#topics) section to jump to topics of interest
 - RegressionExamples
   - [housing](./RegressionExamples/housing/README.md): regression example using historic housing prices from Boston using multiple notebooks
@@ -147,16 +147,15 @@ result = module1.my_function()
 ```
 
 ### Package Benefits
-There are many benefits to the package organization including sharing, updating, and reproducing analysis. For more details see: [Package Importance](./Markdowns/PackageImportance.md).
+There are many benefits to the package organization including sharing, updating, and reproducing analysis. For more details see: [Package Guide](./PackageCreation/PackageGuide.md).
 
-Key benefits elaborated on in the file linked above.
+Key benefits include:
 
 - **Code Reusability**
 - **Maintainability**
 - **Collaboration**
 - **Reproducibility**
 - **Robustness**
-
 
 ## Essential Packages
 [Back to Top](#basic-guide-to-python-concepts-and-tools-for-machine-learning)
