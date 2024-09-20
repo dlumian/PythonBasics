@@ -45,7 +45,8 @@ Outlined below are key directories (alphabetically) in this repo:
   - environment files: txt and ymls containing required details on Python version and packages 
 - LICENSE: Info on using this repository
 - Markdowns
-  - [Data Descriptors](./Markdowns/DataDescriptors.md): Facotrs that define and provide insight into data quality, such as structured data, missing values, and time-series features
+  - [Aliases](./Markdowns/Aliases.md): Explanation and examples of how to create shell aliases to speed development
+  - [Data Descriptors](./Markdowns/DataDescriptors.md): Factors that define and provide insight into data quality, such as structured data, missing values, and time-series features
   - [Data Science Topics](./Markdowns/DsTopics.md): Overview of data science goals and topics providing a quick explanation of types of analyses and their importance
   - [Helpful Tools](./Markdowns/HelpfulTools.md): Tools to optimize efficiency including text editing, debugging, style guides, and more 
   - [Jupyter Notebooks](./Markdowns/JupyterNotebooks.md): Describes cell types, kernels, and basic execution instructions for notebooks
@@ -107,7 +108,7 @@ Deep-dive topics of interest:
       mkdir new_directory   # Create a new directory
       ```
     <span style="color:red"> - **NOTE:** Many CLIs exist and may vary for many reasons including operating system. Be sure to find the correct instructions for your workspace.</span>
-    
+    - See [Aliases](./Markdowns/Aliases.md) for examples of optimizing shell environments for development work.
 
 - **SQL:**
   - A relational database querying language that's efficient for data analysis and manipulation

@@ -102,7 +102,7 @@ This step helps ensure that the package works correctly directly from your repos
 Test PyPI allows you to test the package distribution process without affecting the official PyPI repository. 
 
 1. **Ensure your package files are ready**:
-   Ensure your package has a `setup.py` and other necessary files (README, LICENSE, etc.).
+   Ensure your package has a `setup.py` and other necessary files (README, LICENSE, etc.). An example `setup.py` file is provided in this directory.
 
 2. **Build the package**:
    Two options presented for building.
